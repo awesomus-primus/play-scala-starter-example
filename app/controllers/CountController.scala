@@ -22,4 +22,8 @@ class CountController @Inject() (cc: ControllerComponents,
    */
   def count = Action { Ok(counter.nextCount().toString) }
 
+  def index = Action {
+    Ok(views.html.newindex("This is your first clue so read carefully... what is visible only to the dev?"))
+  }
+
 }

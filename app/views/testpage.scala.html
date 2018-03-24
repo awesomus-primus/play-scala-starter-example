@@ -1,0 +1,86 @@
+@(message: String, style: String = "scala")
+
+@defining(play.core.PlayVersion.current) { version =>
+
+    <section id="top">
+        <div class="wrapper baby" id="the-x-factor">
+            <h1><a href="#what-is-the-meaning-of-life?">@message</a></h1>
+        </div>
+    </section>
+
+    <div id="content" class="wrapper doc">
+        <article>
+            <h1>This is Sparta!</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit anim id est laborum.</p>
+
+            <h2>It will be amazing when it's finished.</h2>
+            <p><a href="#if-you-see-this-help-me">Lorem</a> ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit anim id est laborum.</p>
+
+            <h2>It will be better than going to the Moon and back.</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit anim id est laborum.</p>
+            <h2>It will be better than heroine...</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit anim id est laborum.</p>
+            <h2>It will be better than cocaine...</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit anim id est laborum.</p>
+            <h2>It will be better than sex...</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit anim id est laborum.</p>
+            <h2>It will be better than music when high...</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit anim id est laborum.</p>
+
+        </article>
+
+        <aside>
+            <h3>Browse</h3>
+            <ul>
+                <li><a href="https://playframework.com/documentation/@version">Documentation</a></li>
+                <li><a href="https://playframework.com/documentation/@version/api/@style/index.html">Browse the @{
+                    style.capitalize
+                } API</a></li>
+            </ul>
+            <h3>Start here</h3>
+            <ul>
+                <li><a href="https://playframework.com/documentation/@version/PlayConsole">
+                    Using the Play console</a></li>
+                <li><a href="https://playframework.com/documentation/@version/IDE">
+                    Setting up your preferred IDE</a></li>
+                <li><a href="https://playframework.com/download#examples">Example Projects</a>
+            </ul>
+            <h3 id="help_me_now">Help here</h3>
+            <ul>
+                <li><a href="https://stackoverflow.com/questions/tagged/playframework">Stack Overflow</a></li>
+                <li><a href="http://groups.google.com/group/play-framework">Mailing List</a></li>
+                <li><a href="https://gitter.im/playframework/playframework">Gitter Channel</a></li>
+            </ul>
+            <a id="outlier" href="#the-x-factor" visibility="hidden">click me now</a>
+
+        </aside>
+    </div>
+}

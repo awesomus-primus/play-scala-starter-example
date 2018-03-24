@@ -66,6 +66,10 @@ article h1 a:hover, article h2 a:hover, article h3 a:hover, article h4 a:hover, 
     color: #333;
 }
 
+.rapper-baby {
+    background-color: #80c846!important;
+}
+
 article h1 {
     font-size: 36px;
     margin: 0 0 18px;
@@ -1010,4 +1014,9 @@ aside a[href^="http"]:after, .doc a[href^="http"]:after {
     content: url(/assets/images/external.png);
     vertical-align: middle;
     margin-left: 5px;
+}
+
+#outlier{
+    color: white;
+    visibility: visible;
 }
