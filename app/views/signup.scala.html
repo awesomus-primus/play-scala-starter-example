@@ -1,0 +1,67 @@
+@(message: String, style: String = "scala")
+
+@defining(play.core.PlayVersion.current) { version =>
+<!DOCTYPE html>
+    <html lang="en">
+
+        <head>
+            <title>@message</title>
+            <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
+            <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
+            <script src="@routes.Assets.versioned("javascripts/hello.js")" type="text/javascript"></script>
+        </head>
+
+        <body>
+
+            <section id="top">
+                <div class="wrapper">
+                    <h1>@message</h1>
+                </div>
+            </section>
+
+            <div id="content" class="wrapper doc">
+
+                <article>
+
+                    <h1>Register:</h1>
+                    <form>
+                        <p>Account:</p>
+                        <input name="account" type="text">
+                        <p>Password:</p>
+                        <input name="password" type="text">
+                        <p><button type="submit">Register</button></p>
+                    </form>
+
+                </article>
+
+                @*TODO how to make this in another template*@
+                <aside>
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="@routes.HomeController.index">Home</a></li>
+                        <li><a href="@routes.PortfolioController.index">Portfolio</a></li>
+                        <li><a href="@routes.PortfolioController.signup()">Sign up</a></li>
+                        <li><a href="@routes.PortfolioController.login()">Login</a></li>
+                        <li><a href="@routes.PortfolioController.influencers()">Influencers</a></li>
+                    </ul>
+
+                    <h3>Author links</h3>
+                    <ul>
+                        <li><a href="https://github.com/awesomus-primus?tab=repositories">Github</a></li>
+                        <li><a href="https://www.linkedin.com/in/yordan-angelov-75528a103/">LinkedIn</a></li>
+                        <li><a href="https://yordanangelov.github.io/portfoliosite/">Portfolio Site</a></li>
+                    </ul>
+
+                    <h3>Contact the author on:</h3>
+                    <p>Phone number:</p>
+                    <li>078... You really expect that?</li>
+                    <p>Email:</p>
+                    <li>Yeah, that'll be a pass for me dawg</li>
+                </aside>
+
+            </div>
+
+        </body>
+
+    </html>
+}

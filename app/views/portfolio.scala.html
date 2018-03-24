@@ -1,0 +1,104 @@
+@(message: String, style: String = "scala")
+
+@defining(play.core.PlayVersion.current) { version =>
+<!DOCTYPE html>
+    <html lang="en">
+
+        <head>
+            <title>@message</title>
+            <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
+            <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
+            <script src="@routes.Assets.versioned("javascripts/hello.js")" type="text/javascript"></script>
+        </head>
+
+        <body>
+
+            <section id="top">
+                <div class="wrapper">
+                    <h1>@message</h1>
+                </div>
+            </section>
+
+            <div id="content" class="wrapper doc">
+
+                <article>
+
+                    <h1>About me</h1>
+
+                    <img alt="Totally My Photo" id="me">
+
+                    <h1>Education</h1>
+
+                    <ul>
+                        <li>2:1 Degree in BA(Hons) Retail Management at Bournemouth University</li>
+                        <li>1:1 Degree in MA(Hons) Cybersecurity at Harvard University</li>
+                        <li>1:1 Degree in MA(Hons) Nuclear Physics at Cambridge University</li>
+                    </ul>
+
+                    <h1>Work experience</h1>
+
+                    <ul>
+                        <li>Software Test Engineer</li>
+                        <li>Student Ambassador</li>
+                        <li>Accounts Assistant</li>
+                        <li>Superhero</li>
+                        <li>Astronaut</li>
+                        <li>Nuclear physicist</li>
+                    </ul>
+
+                    <h1>Ten10</h1>
+
+                    <ul>
+                        <li>Finished 1st in the Ten10 Graduate Academy</li>
+                        <li>
+                            <details>
+                                <summary>Placed at Capgemini</summary>
+                                <p>because of being too awesome...</p>
+                            </details>
+                        </li>
+                        <li>Manufactured a 2-person rocket</li>
+                        <li>First person to hire more people than the founder</li>
+                        <li>Brought more than $5tn profit in the first 3 weeks of being hired</li>
+                    </ul>
+
+                    <h1>Side projects</h1>
+
+                    <ul>
+                        <li>Created the first hybrid rocket</li>
+                        <li>Won every discipline in the Olympics twice per year</li>
+                    </ul>
+
+                </article>
+
+                @*<aside>@sidebar</aside>*@
+
+                <aside>
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="@routes.HomeController.index">Home</a></li>
+                        <li><a href="@routes.PortfolioController.index">Portfolio</a></li>
+                        <li><a href="@routes.PortfolioController.signup()">Sign up</a></li>
+                        <li><a href="@routes.PortfolioController.login()">Login</a></li>
+                        <li><a href="@routes.PortfolioController.influencers()">Influencers</a></li>
+                    </ul>
+
+                    <h3>Author links</h3>
+                    <ul>
+                        <li><a href="https://github.com/awesomus-primus?tab=repositories">Github</a></li>
+                        <li><a href="https://www.linkedin.com/in/yordan-angelov-75528a103/">LinkedIn</a></li>
+                        <li><a href="https://yordanangelov.github.io/portfoliosite/">Portfolio Site</a></li>
+                    </ul>
+
+                    <h3>Contact the author on:</h3>
+                    <p>Phone number:</p>
+                    <li>078... You really expect that?</li>
+                    <p>Email:</p>
+                    <li>Yeah, that'll be a pass for me dawg</li>
+                </aside>
+
+            </div>
+
+        </body>
+
+    </html>
+}

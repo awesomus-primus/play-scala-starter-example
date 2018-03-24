@@ -1,0 +1,102 @@
+@(message: String, style: String = "scala")
+
+@defining(play.core.PlayVersion.current) { version =>
+<!DOCTYPE html>
+    <html lang="en">
+
+        <head>
+            <title>@message</title>
+            <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
+            <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
+            <script src="@routes.Assets.versioned("javascripts/hello.js")" type="text/javascript"></script>
+        </head>
+
+        <body>
+
+            <section id="top">
+                <div class="wrapper">
+                    <h1>@message</h1>
+                </div>
+            </section>
+
+            <div id="content" class="wrapper doc">
+
+                <article>
+
+                    <h1>List of Influencers</h1>
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                            <th>Industry</th>
+                        </tr>
+                        <tr>
+                            <td>Elon Musk</td>
+                            <td>Fintech, Solar Energy, Rockets, Solar-powered vehicles</td>
+                        </tr>
+                        <tr>
+                            <td>Arnold Schwarzenegger</td>
+                            <td>Bodybuilding, Movies and Entertainment, Real estate, Nutrition, Politics</td>
+                        </tr>
+                        <tr>
+                            <td>Jocko Willink</td>
+                            <td>Military, Social Media, Leadership Consultancy</td>
+                        </tr>
+                        <tr>
+                            <td>Joe Rogan</td>
+                            <td>Martial Arts and Sports, Social Media</td>
+                        </tr>
+                        <tr>
+                            <td>Patrick Bet-David</td>
+                            <td>Social Media, Financial Services, Business Coaching</td>
+                        </tr>
+                        <tr>
+                            <td>Jordan Peterson</td>
+                            <td>Clinical Psychotherapy, Education, Social Media</td>
+                        </tr>
+                    </table>
+
+
+
+                    <form>
+                        <h3>Add another influencer:</h3>
+                        <p>Name:</p>
+                        <input type="text">
+                        <p>Industry:</p>
+                        <input type="text">
+                        <br>
+                        <button type="submit">Add</button>
+                    </form>
+
+                </article>
+
+                @*TODO how to make this in another template*@
+                <aside>
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="@routes.HomeController.index">Home</a></li>
+                        <li><a href="@routes.PortfolioController.index">Portfolio</a></li>
+                        <li><a href="@routes.PortfolioController.signup()">Sign up</a></li>
+                        <li><a href="@routes.PortfolioController.login()">Login</a></li>
+                        <li><a href="@routes.PortfolioController.influencers()">Influencers</a></li>
+                    </ul>
+
+                    <h3>Author links</h3>
+                    <ul>
+                        <li><a href="https://github.com/awesomus-primus?tab=repositories">Github</a></li>
+                        <li><a href="https://www.linkedin.com/in/yordan-angelov-75528a103/">LinkedIn</a></li>
+                        <li><a href="https://yordanangelov.github.io/portfoliosite/">Portfolio Site</a></li>
+                    </ul>
+
+                    <h3>Contact the author on:</h3>
+                    <p>Phone number:</p>
+                    <li>078... You really expect that?</li>
+                    <p>Email:</p>
+                    <li>Yeah, that'll be a pass for me dawg</li>
+                </aside>
+
+            </div>
+
+        </body>
+
+    </html>
+}
