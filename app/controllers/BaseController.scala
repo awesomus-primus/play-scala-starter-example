@@ -1,12 +1,12 @@
 package controllers
 
 import javax.inject._
-import play.api.data.Form
-import play.api.data.Forms.mapping
+import play.api.data.Forms._
+import play.api.data._
 import play.api.mvc._
 
 @Singleton
-class HomeController @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
+class BaseController @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
 
   def index = Action {
     Ok(views.html.index("The beginning of the end"))
@@ -25,7 +25,7 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
     val userData = request.body
     val newUser = models.User(userData.name, userData.age)
     val id = models.User.create(newUser)
-    Redirect(routes.HomeController.index)
+    Redirect(routes.BaseController.index)
   }
 
 }
