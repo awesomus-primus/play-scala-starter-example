@@ -31,3 +31,4 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
 }
 
 case class UserData(name: String, age: Int)
+
